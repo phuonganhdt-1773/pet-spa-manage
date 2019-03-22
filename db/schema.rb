@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_22_064521) do
+ActiveRecord::Schema.define(version: 2019_03_22_074440) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -36,10 +36,12 @@ ActiveRecord::Schema.define(version: 2019_03_22_064521) do
     t.float "price"
     t.bigint "order_id"
     t.bigint "pet_id"
+    t.bigint "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
     t.index ["pet_id"], name: "index_order_details_on_pet_id"
+    t.index ["service_id"], name: "index_order_details_on_service_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -100,6 +102,7 @@ ActiveRecord::Schema.define(version: 2019_03_22_064521) do
   add_foreign_key "likes", "users"
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "pets"
+  add_foreign_key "order_details", "services"
   add_foreign_key "orders", "users"
   add_foreign_key "pets", "users"
 end
