@@ -52,3 +52,4 @@ build-iPhoneSimulator/
 /config/storage.yml
 /config/master.key
 /config/database.yml
+/log/*
