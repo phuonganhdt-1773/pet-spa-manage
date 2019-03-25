@@ -1,3 +1,3 @@
 class Service < ApplicationRecord
-  has_many :order_detail
+  has_many :order_details
 end
