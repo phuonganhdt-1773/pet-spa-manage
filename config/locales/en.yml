@@ -1,1 +1,18 @@
 en:
+  layouts:
+    PetSpaManage: "PetSpaManage"
+  users:
+    create:
+      welcome_to_pet_spa_house: "Welcome to the Pet spa house!"
+    new:
+      sign_up: "Sign up"
+      this_will_be_a_signup_page_for_new_users:
+        "This will be a signup page for new users."
+      confirmation: "Confirmation"
+      create_my_account: "Create my account"
+    index:
+      all_users: "All users"
+      user_not_found: "User not found!"
+  shared:
+    error_messages:
+      the_form_contains: "The form contains"
