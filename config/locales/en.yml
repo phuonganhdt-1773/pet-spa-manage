@@ -16,3 +16,47 @@ en:
   shared:
     error_messages:
       the_form_contains: "The form contains"
+    admin:
+      header:
+        title: "Pets Spa Admin"
+        username: "Username"
+        change_password: "Change password"
+      sidebar:
+        dashboard: "Dashboard"
+        manage_content: "MANAGE CONTENT"
+        posts: "Posts"
+        comments: "Comments"
+        likes: "Likes"
+        pets: "Pets"
+        services: "Services"
+        orders: "Orders"
+        users: "Users"
+        stats: "STATS"
+      footer:
+        title: "Pet spa - Powered by LienAnh "
+  admin:
+    base:
+      home:
+        title: "Admin"
+      header:
+        call: "Call us Now: 0971006294"
+        login: "Login"
+        register: "Register"
+        home: "Home"
+        services: "Services"
+        blogs: "Blogs"
+        about_us: "About us"
+        contact_us: "Contact us"
+      hot_blog:
+        title: "Haustiere"
+        summary: "Pet trade and exchange"
+        summary_1: "Join the club with us, experience the best things with your pet"
+        read_more: "Read more"
+  static_pages:
+    home:
+      title: "Pet spa"
+    footer:
+      title: "@2019 - Design by:"
+    service:
+      read_more: "Read more"
+      our_service: "OUR SERVICES"

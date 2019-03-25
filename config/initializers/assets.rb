@@ -12,3 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w(admin/sb-admin-2.css)
+Rails.application.config.assets.precompile += %w(admin/theme.css)
+Rails.application.config.assets.precompile += %w(admin/datepicker.css)
