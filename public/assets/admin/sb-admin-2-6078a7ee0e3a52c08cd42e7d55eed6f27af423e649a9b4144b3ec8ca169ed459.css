@@ -1,0 +1,811 @@
+/*!
+ * Start Bootstrap - SB Admin 2 v3.3.7+1 (http://startbootstrap.com/template-overviews/sb-admin-2)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+/* line 7, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+body {
+  background-color: #f8f8f8;
+}
+
+/* line 10, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+#wrapper {
+  width: 100%;
+  background-color: #364150;
+}
+
+/* line 14, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+#page-wrapper {
+  padding: 0 15px;
+  min-height: 568px;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  /* line 20, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+  }
+}
+/* line 26, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links {
+  margin-right: 0;
+}
+
+/* line 29, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links li {
+  display: inline-block;
+}
+
+/* line 32, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links li:last-child {
+  margin-right: 15px;
+}
+
+/* line 35, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links li a {
+  padding: 15px;
+  min-height: 50px;
+}
+
+/* line 39, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-menu li {
+  display: block;
+}
+
+/* line 42, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-menu li:last-child {
+  margin-right: 0;
+}
+
+/* line 45, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-menu li a {
+  padding: 3px 20px;
+  min-height: 0;
+}
+
+/* line 49, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-menu li a div {
+  white-space: normal;
+}
+
+/* line 52, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+  width: 310px;
+  min-width: 0;
+}
+
+/* line 58, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-messages {
+  margin-left: 5px;
+}
+
+/* line 61, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-tasks {
+  margin-left: -59px;
+}
+
+/* line 64, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-alerts {
+  margin-left: -123px;
+}
+
+/* line 67, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-top-links .dropdown-user {
+  right: 0;
+  left: auto;
+}
+
+/* line 71, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .sidebar-nav.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 75, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .sidebar-search {
+  padding: 15px;
+}
+
+/* line 78, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar ul li {
+  border-bottom: 1px solid #3d4957;
+}
+
+/* line 81, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar ul li a.active {
+  background-color: #eeeeee;
+  color: black !important;
+}
+
+/* line 85, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .arrow {
+  float: right;
+}
+
+/* line 88, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .fa.arrow:before {
+  content: "\f104";
+}
+
+/* line 91, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
+/* line 94, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+  border-bottom: none !important;
+}
+
+/* line 98, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
+
+/* line 101, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.sidebar .nav-third-level li a {
+  padding-left: 52px;
+}
+
+@media (min-width: 768px) {
+  /* line 105, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 51px;
+  }
+
+  /* line 111, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  .navbar-top-links .dropdown-messages,
+  .navbar-top-links .dropdown-tasks,
+  .navbar-top-links .dropdown-alerts {
+    margin-left: auto;
+  }
+}
+/* line 117, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-outline {
+  color: inherit;
+  background-color: transparent;
+  transition: all .5s;
+}
+
+/* line 122, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-primary.btn-outline {
+  color: #428bca;
+}
+
+/* line 125, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-success.btn-outline {
+  color: #5cb85c;
+}
+
+/* line 128, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-info.btn-outline {
+  color: #5bc0de;
+}
+
+/* line 131, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-warning.btn-outline {
+  color: #f0ad4e;
+}
+
+/* line 134, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-danger.btn-outline {
+  color: #d9534f;
+}
+
+/* line 137, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+  color: white;
+}
+
+/* line 144, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 149, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #999999;
+}
+
+/* line 154, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat li.left .chat-body {
+  margin-left: 60px;
+}
+
+/* line 157, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat li.right .chat-body {
+  margin-right: 60px;
+}
+
+/* line 160, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat li .chat-body p {
+  margin: 0;
+}
+
+/* line 163, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+  margin-right: 5px;
+}
+
+/* line 167, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.chat-panel .panel-body {
+  height: 350px;
+  overflow-y: scroll;
+}
+
+/* line 171, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.login-panel {
+  margin-top: 25%;
+}
+
+/* line 174, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+
+/* line 178, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 182, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  background: transparent;
+}
+
+/* line 189, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+table.dataTable thead .sorting_asc:after {
+  content: "\f0de";
+  float: right;
+  font-family: fontawesome;
+}
+
+/* line 194, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+table.dataTable thead .sorting_desc:after {
+  content: "\f0dd";
+  float: right;
+  font-family: fontawesome;
+}
+
+/* line 199, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+table.dataTable thead .sorting:after {
+  content: "\f0dc";
+  float: right;
+  font-family: fontawesome;
+  color: rgba(50, 50, 50, 0.5);
+}
+
+/* line 205, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+}
+
+/* line 214, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+/* line 222, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+/* line 230, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ddd;
+  background-color: #eee !important;
+}
+
+/* line 236, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.show-grid {
+  margin: 15px 0;
+}
+
+/* line 239, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.huge {
+  font-size: 40px;
+}
+
+/* line 242, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-green {
+  border-color: #5cb85c;
+}
+
+/* line 245, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-green > .panel-heading {
+  border-color: #5cb85c;
+  color: white;
+  background-color: #5cb85c;
+}
+
+/* line 250, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-green > a {
+  color: #5cb85c;
+}
+
+/* line 253, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-green > a:hover {
+  color: #3d8b3d;
+}
+
+/* line 256, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-red {
+  border-color: #d9534f;
+}
+
+/* line 259, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-red > .panel-heading {
+  border-color: #d9534f;
+  color: white;
+  background-color: #d9534f;
+}
+
+/* line 264, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-red > a {
+  color: #d9534f;
+}
+
+/* line 267, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-red > a:hover {
+  color: #b52b27;
+}
+
+/* line 270, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+
+/* line 273, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-yellow > .panel-heading {
+  border-color: #f0ad4e;
+  color: white;
+  background-color: #f0ad4e;
+}
+
+/* line 278, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-yellow > a {
+  color: #f0ad4e;
+}
+
+/* line 281, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.panel-yellow > a:hover {
+  color: #df8a13;
+}
+
+/* line 284, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline {
+  position: relative;
+  padding: 20px 0 20px;
+  list-style: none;
+}
+
+/* line 289, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background-color: #eeeeee;
+}
+
+/* line 299, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* line 303, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+/* line 308, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li:after {
+  clear: both;
+}
+
+/* line 311, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+/* line 316, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li:after {
+  clear: both;
+}
+
+/* line 319, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li > .timeline-panel {
+  float: left;
+  position: relative;
+  width: 46%;
+  padding: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+/* line 329, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li > .timeline-panel:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #ccc;
+}
+
+/* line 340, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li > .timeline-panel:after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  border-top: 14px solid transparent;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #fff;
+}
+
+/* line 351, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li > .timeline-badge {
+  z-index: 100;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50% 50% 50% 50%;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 50px;
+  color: #fff;
+  background-color: #999999;
+}
+
+/* line 366, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+/* line 369, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+
+/* line 375, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+
+/* line 381, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+/* line 384, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+/* line 387, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+/* line 390, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+/* line 393, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+/* line 396, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+/* line 400, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+/* line 404, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  /* line 408, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline:before {
+    left: 40px;
+  }
+
+  /* line 411, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline > li > .timeline-panel {
+    width: calc(10%);
+    width: -moz-calc(10%);
+    width: -webkit-calc(10%);
+  }
+
+  /* line 416, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline > li > .timeline-badge {
+    top: 16px;
+    left: 15px;
+    margin-left: 0;
+  }
+
+  /* line 421, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  /* line 424, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline > li > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+  }
+
+  /* line 430, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+  ul.timeline > li > .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+  }
+}
+/* line 437, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.page-footer {
+  height: 40px;
+  background-color: #364150;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* line 443, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.page-footer .page-footer-inner {
+  color: #98a6ba;
+}
+
+/* line 446, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+button.btn-danger.btn-delete {
+  border-radius: 3px;
+  height: 30px;
+  width: 70px;
+}
+
+/* line 451, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+button.btn.dark.btn-outline {
+  /* border: 1px solid; */
+  background-color: #cdcdcd;
+  height: 32px;
+  margin-top: -3px;
+}
+
+/* line 457, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+button.btn.dark.btn-outline:hover {
+  background-color: #e3dfdf;
+}
+
+/* line 460, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn.btn-outline.blue {
+  border-color: #3598dc;
+  color: #3598dc;
+  background: 0 0;
+}
+
+/* line 465, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn.btn-outline.blue.active, .btn.btn-outline.blue:active, .btn.btn-outline.blue:active:focus, .btn.btn-outline.blue:active:hover, .btn.btn-outline.blue:focus, .btn.btn-outline.blue:hover {
+  border-color: #3598dc;
+  color: #FFF;
+  background-color: #3598dc;
+}
+
+/* line 470, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-default.sidebar {
+  margin-top: 0px;
+}
+
+/* line 474, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+li.nav-item.dropdown {
+  padding-top: 5px;
+}
+
+/* line 477, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+li.nav-item.dropdown img {
+  float: left;
+  border-radius: 50% !important;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 485, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+li.nav-item.dropdown #navbarDropdown {
+  float: right;
+  padding-left: 5px;
+  padding-top: 10px;
+  color: white;
+}
+
+/* line 491, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-default {
+  background-color: #364150;
+  border-color: none;
+}
+
+/* line 495, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+/* line 498, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+i {
+  margin-right: 5px;
+}
+
+/* line 502, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+ul#side-menu li a i {
+  margin-right: 10px;
+}
+
+/* line 505, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+ul#side-menu li a {
+  color: #b4bcc8;
+}
+
+/* line 508, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.page-header {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-weight: 700;
+  /* font-size: 20px; */
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+/* line 516, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+h4.dashboard {
+  color: #708096;
+  font-size: 15px;
+  padding-left: 17px;
+}
+
+/* line 521, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.col-lg-12 {
+  margin-top: 20px;
+}
+
+/* line 525, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+div#datatable_wrapper div#datatable_length {
+  margin: 10px 0px 10px 0px;
+}
+
+/* line 528, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.form-horizontal select.form-control {
+  background-color: #1bbc9b;
+  color: white;
+}
+
+/* line 532, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+div.dataTables_wrapper div.dataTables_length select {
+  height: 25px;
+}
+
+/* line 535, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+div.dataTables_wrapper div.dataTables_filter input {
+  width: 145px !important;
+  box-shadow: none !important;
+  vertical-align: middle;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #c2cad8;
+}
+
+/* line 546, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.add-new-item {
+  padding-top: 10px;
+}
+
+/* line 550, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.add-new-item button {
+  background-color: #32c5d2;
+  border: none;
+}
+
+/* line 554, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.add-new-item button i {
+  padding-right: 4px;
+}
+
+/* line 558, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.btn.btn-outline.green {
+  border-color: #32c5d2;
+  color: #32c5d2;
+  background: 0 0;
+}
+
+/* line 563, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+a.navbar-brand img {
+  width: 17%;
+  height: 100%;
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 569, /home/hoang.thi.lien/Rails/pet-spa-manage/app/assets/stylesheets/admin/sb-admin-2.scss */
+.cke_reset {
+  height: 100% !important;
+}
