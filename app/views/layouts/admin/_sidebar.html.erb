@@ -9,7 +9,9 @@
     <%= link_to t(".posts"), "#" %>
   </li>
   <li>
-    <%= link_to t(".comments"), "#" %>
+    <% if current_page?(admin_comments_url) %>
+      <%= link_to t(".comments"), admin_comments_url, class: "active" %>
+    <% end %>
   </li>
   <li>
     <%= link_to t(".likes"), "#" %>

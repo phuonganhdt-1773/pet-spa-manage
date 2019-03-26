@@ -1,3 +1,4 @@
+//= require jquery
 //= require bootstrap.min
 //= require metisMenu.min
 //= require morris.min
