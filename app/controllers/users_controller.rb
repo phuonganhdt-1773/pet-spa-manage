@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update)
+  before_action :correct_user, only: %i(edit update)
+  before_action :verify_admin!, only: %i(destroy index)
+  before_action :load_user, except: %i(new create index)
+  before_action :logged_in_user, except: %i(new create)
 
   def index
     @users = User.page(params[:page]).per Settings.quantity_per_page
@@ -34,6 +37,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t(".user_delete_succeed")
+    else
+      flash[:error] = t(".user_delete_failed")
+    end
+    redirect_to users_url
+  end
+
   private
 
   def user_params
@@ -47,8 +59,8 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def destroy
-    log_out
-    redirect_to root_url
+  def correct_user
+    @user = User.find_by id: params[:id]
+    redirect_to(root_url) unless current_user?(@user)
   end
 end
