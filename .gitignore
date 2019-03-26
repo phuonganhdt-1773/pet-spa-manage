@@ -52,7 +52,7 @@ build-iPhoneSimulator/
 /config/storage.yml
 /config/master.key
 /config/database.yml
-/log/*
+/log/development.log
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml

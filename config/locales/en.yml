@@ -52,6 +52,18 @@ en:
         summary: "Pet trade and exchange"
         summary_1: "Join the club with us, experience the best things with your pet"
         read_more: "Read more"
+    comments:
+      index:
+        stt: STT
+        comments: "All comments"
+        post: "Post name"
+        user: "User name"
+        search: "Search"
+        content: "Content"
+        created_at: "Created at"
+        action: "Action"
+        delete: "Delete"
+        confirm: "Are you sure"
   static_pages:
     home:
       title: "Pet spa"

@@ -6,9 +6,15 @@
   background-color: #cdcdcd;
   margin-bottom: 0px !important;
 }
-.footer-page{
-  margin-top: 0px !important;
-}
 .vc_row.wpb_row.block-product2 {
     height: 400px;
+}
+ul#side-menu, nav.navbar.navbar-default.navbar-static-top  {
+    display: block;
+}
+form.search {
+    display: flex;
+}
+a.btn-create{
+  margin-bottom: 20px;
 }

@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   root "users#index"
 
   resources :users
+  namespace :admin do
+   resources :comments, only: %i(index destroy)
+  end
 end
