@@ -13,6 +13,15 @@ en:
     index:
       all_users: "All users"
       user_not_found: "User not found!"
+    update:
+      profile_updated: "Profile updated"
+    edit:
+      please_log_in: "Please log in."
+      edit_user: "Edit user"
+      confirmation: "Confirmation"
+      save_changes: "Save changes"
+      change: "change"
+      update_your_profile: "Update your profile"
   shared:
     error_messages:
       the_form_contains: "The form contains"
