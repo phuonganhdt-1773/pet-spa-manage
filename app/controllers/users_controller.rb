@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show)
+  before_action :load_user, only: %i(show edit update)
 
   def index
     @users = User.page(params[:page]).per Settings.quantity_per_page
@@ -20,6 +20,17 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render :new
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t(".profile_updated")
+      redirect_to @user
+    else
+      render :edit
     end
   end
 
