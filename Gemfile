@@ -13,6 +13,8 @@ gem "mini_magick"
 gem "bootstrap", "~> 4.0"
 gem "bootstrap-sass", "3.3.7"
 gem "bcrypt", "3.1.12"
+gem "kaminari"
+gem "kaminari-bootstrap"
 
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
