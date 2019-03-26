@@ -12,7 +12,7 @@ en:
       create_my_account: "Create my account"
     index:
       all_users: "All users"
-      user_not_found: "User not found!"
+      please_log_in: "Please log in."
     update:
       profile_updated: "Profile updated"
     edit:
@@ -22,6 +22,13 @@ en:
       save_changes: "Save changes"
       change: "change"
       update_your_profile: "Update your profile"
+    show:
+      user_not_found: "User not found!"
+    destroy:
+      user_delete_succeed: "User delete succeed!"
+    user:
+      you_sure: "Are you sure?"
+      delete: "delete"
   shared:
     error_messages:
       the_form_contains: "The form contains"
@@ -81,6 +88,18 @@ en:
     service:
       read_more: "Read more"
       our_service: "OUR SERVICES"
+    header:
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      login: "Login"
+      register: "Register"
+      home: "Home"
+      services: "Services"
+      blogs: "Blogs"
+      about_us: "About us"
+      contact_us: "Contact us"
+      account: "Account"
   sessions:
     create:
       invalid_email_or_password_combination:

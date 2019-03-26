@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :pets
   has_many :orders
   has_many :likes
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   before_save {email.downcase!}
 
