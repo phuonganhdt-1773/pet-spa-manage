@@ -60,3 +60,13 @@ en:
     service:
       read_more: "Read more"
       our_service: "OUR SERVICES"
+  sessions:
+    create:
+      invalid_email_or_password_combination:
+        "Invalid email/password combination"
+    new:
+      log_in: "Log in"
+      sign_up_now: "Sign up now!"
+      new_user: "New user?"
+      remember_me_on_this_computer: "Remember me on this computer"
+      forgot_password: "(Forgot password?)"
