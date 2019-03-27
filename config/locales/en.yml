@@ -79,7 +79,10 @@ en:
         created_at: "Created at"
         action: "Action"
         delete: "Delete"
-        confirm: "Are you sure"
+        confirm: "Are you sure?"
+        delete_fail: "Delete fail"
+      destroy:
+        deleted: "Comment deleted"
   static_pages:
     home:
       title: "Pet spa"

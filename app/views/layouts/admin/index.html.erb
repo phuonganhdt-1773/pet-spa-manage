@@ -4,6 +4,7 @@
     <title><%= full_title yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body>
     <div id="wrapper">
@@ -14,6 +15,9 @@
      <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
             <%= yield %>
           </div>
         </div>
