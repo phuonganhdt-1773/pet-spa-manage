@@ -10,9 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :activation_digest
       t.boolean :activated
       t.datetime :activated_at
-      t.string :reset_digest
-      t.datetime :reset_send_at
-      t.integer :type_user
+      t.boolean :admin
 
       t.timestamps
     end
