@@ -92,7 +92,6 @@ en:
       title: "@2019 - Design by:"
     service:
       read_more: "Read more"
-      our_service: "OUR SERVICES"
     header:
       profile: "Profile"
       settings: "Settings"
@@ -101,7 +100,7 @@ en:
       register: "Register"
       home: "Home"
       services: "Services"
-      blogs: "Blogs"
+      posts: "Posts"
       about_us: "About us"
       contact_us: "Contact us"
       account: "Account"
@@ -158,3 +157,27 @@ en:
     new:
       forgot_password: "Forgot password"
       submit: "Submit"
+  services:
+    service_home:
+      read_more: "Read more"
+      our_service: "OUR SERVICES"
+    index:
+      read_more: "Read more"
+    show:
+      related: "Related services"
+      detail: "Detail"
+      login: "Please login before book"
+  posts:
+    post_home:
+      title: "POSTS"
+      read_more: "Read more"
+      comments: "Comments"
+    show:
+      related: "Related Posts"
+      detail: "Detail"
+      book: "Book now"
+      login: "Please login before book"
+    index:
+      title: "Posts"
+      read_more: "Read more"
+
