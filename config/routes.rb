@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "sessions/new"
   get "/signup", to: "users#new"
-  get "/admin", to: "admin/base#home"
+  get "/admin", to: "admin/base#home", :as => "admin"
   get "/home", to: "static_pages#home"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
@@ -17,5 +17,6 @@ Rails.application.routes.draw do
    resources :comments
    resources :services
    resources :posts
+   resources :users
   end
 end

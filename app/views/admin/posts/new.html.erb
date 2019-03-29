@@ -1,0 +1,25 @@
+<% provide(:title, t(".add_new_post")) %>
+<% provide(:button_text, t(".create_my_post")) %>
+<h1><%= t ".add_new_post" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @post] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_area :title, placeholder: t(".title") %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, placeholder: t(".content") %>
+
+      <%= f.label :sumary %>
+      <%= f.text_area :sumary, placeholder: t(".sumary") %>
+
+      <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png",
+        class: "picture" %>
+
+      <%= f.submit t(".create_my_post"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

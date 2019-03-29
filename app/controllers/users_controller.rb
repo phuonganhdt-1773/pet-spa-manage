@@ -1,12 +1,7 @@
 class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
-  before_action :verify_admin!, only: %i(destroy index)
-  before_action :load_user, except: %i(new create index)
-  before_action :logged_in_user, except: %i(new create)
-
-  def index
-    @users = User.page(params[:page]).per Settings.quantity_per_page
-  end
+  before_action :verify_admin!, only: %i(destroy)
+  before_action :load_user, :logged_in_user, except: %i(new create)
 
   def new
     @user = User.new
@@ -35,15 +30,6 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def destroy
-    if @user.destroy
-      flash[:success] = t(".user_delete_succeed")
-    else
-      flash[:error] = t(".user_delete_failed")
-    end
-    redirect_to users_url
   end
 
   private

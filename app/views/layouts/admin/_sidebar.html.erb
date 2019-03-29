@@ -6,10 +6,10 @@
     <h4 class="dashboard"><%= t ".manage_content" %></h4>
   </li>
   <li>
-    <%= link_to t(".posts"), "#" %>
+    <%= link_to t(".posts"), admin_posts_path %>
   </li>
   <li>
-      <%= link_to t(".comments"), admin_comments_url %>
+      <%= link_to t(".comments"), admin_comments_path %>
   </li>
   <li>
     <%= link_to t(".likes"), "#" %>
@@ -24,7 +24,7 @@
     <%= link_to t(".orders"), "#" %>
   </li>
   <li>
-    <%= link_to t(".users"), "#" %>
+    <%= link_to t(".users"), admin_users_path %>
   </li>
   <li>
     <h4 class="dashboard"><%= t ".stats" %></h4>

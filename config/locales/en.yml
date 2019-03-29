@@ -85,6 +85,60 @@ en:
         delete_fail: "Delete fail"
       destroy:
         deleted: "Comment deleted"
+    posts:
+      create:
+        create_unsuccess: "Create Unsuccesfully!"
+        created: Post Created!
+      new:
+        create_my_post: "Create my post"
+        add_new_post: "Add new post"
+        title: "Compose title of new post..."
+        content: "Compose content..."
+        sumary: "Compose sumary..."
+      edit:
+        save_change: Save change
+        edit_post: "Edit post"
+      index:
+        posts: "Posts"
+        create: "Create"
+        stt: "No."
+        status: "Status"
+        post: "Posts"
+        content: "Content"
+        sumary: "Sumary"
+        created_at: "Create at"
+        action: "Action"
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you sure?"
+      update:
+        post_updated: "Post updated!"
+      destroy:
+        post_deleted: "Post deleted!"
+        delete_failed: "Post delete failed!"
+      load_post:
+        post_not_found: "Post haven't found"
+      post:
+        post: "Post"
+        ago: "ago"
+        delete: "delete"
+    users:
+      index:
+        stt: "No."
+        avatar: "Avarta"
+        user_name: "User Name"
+        user_email: "User Email"
+        user_phone: "User Phone"
+        user_address: "User Address"
+        created_at: "Create at"
+        action: "Action"
+        delete: "Delete"
+        confirm: "Are you sure?"
+        delete: "Delete"
+      destroy:
+        user_delete_succeed: "User delete succeed"
+        user_delete_failed: "User delete failed"
+
   static_pages:
     home:
       title: "Pet spa"
@@ -96,7 +150,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       log_out: "Log out"
-      login: "Login"
+      log_in: "Log in"
       register: "Register"
       home: "Home"
       services: "Services"
@@ -180,4 +234,8 @@ en:
     index:
       title: "Posts"
       read_more: "Read more"
-
+    valid_user:
+      user_not_active: "user not active"
+      check_expiration: "password expired"
+  post:
+    should_be_less_than_5MB: "The images should be less than 5MB!"

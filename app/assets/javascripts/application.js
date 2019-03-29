@@ -1,4 +1,8 @@
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require jquery
+//= repuire post.js
 //= require bootstrap.min
 //= require metisMenu.min
 //= require morris.min
