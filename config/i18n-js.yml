@@ -1,0 +1,7 @@
+translations:
+- file: 'app/assets/javascripts/i18n/translations.js'
+  only: "*"
+en:
+  posts:
+    Max_file_size_5MB_alert:
+      "Maximum file size is 5MB. Please choose a smaller file."

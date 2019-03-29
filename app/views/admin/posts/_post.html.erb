@@ -1,0 +1,17 @@
+<li id="post-<%= post.id %>">
+  <span class="content">
+    <%= post.title %>
+    <%= post.content %>
+    <%= post.sumary %>
+    <%= image_tag post.picture.url if post.picture? %>
+  </span>
+  <span class="timestamp">
+    <%= t ".post" %>
+    <%= time_ago_in_words(post.created_at) %>
+    <%= t ".ago" %>
+    <% if current_user.admin? %>
+      <%= link_to t(".delete"), post, method: :delete,
+                                       data: { confirm: t(".are_u_sure") } %>
+    <% end %>
+  </span>
+</li>
