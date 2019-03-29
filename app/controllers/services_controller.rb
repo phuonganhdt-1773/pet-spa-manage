@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
   def load_service
     @service = Service.find_by id: params[:id]
     return if @service
-    flash[:error] = t(".service_not_found")
+    flash[:error] = t ".service_not_found"
     redirect_to root_path
   end
 end
