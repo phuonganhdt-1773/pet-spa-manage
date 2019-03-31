@@ -1,0 +1,45 @@
+<% provide(:title, t(".services")) %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="table-toolbar">
+      <%= link_to t(".add"), "#", class: "btn btn-success" %>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table width="100%" class="table table-bordered table-hover" id="datatable">
+          <thead>
+            <tr>
+              <th><%= t ".stt" %></th>
+              <th><%= t ".service_name" %></th>
+              <th><%= t ".status" %></th>
+              <th><%= t ".price" %></th>
+              <th><%= t ".des" %></th>
+              <th><%= t ".created_at" %></th>
+              <th colspan="2"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @services.each_with_index do |s,index| %>
+            <tr>
+              <td><%= create_index params[:page], index, Settings.per_page %></td>
+              <td><%= s.name %></td>
+              <td><%= s.status %></td>
+              <td><%= s.price %></td>
+              <td><%= s.description %></td>
+              <td><%= s.created_at %></td>
+              <td>
+                <%= link_to t(".edit"), edit_admin_service_path(s.id), class: "btn btn-success" %>
+              </td>
+              <td>
+                <%= link_to t(".delete"), admin_service_path(s.id),
+                method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @services %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,19 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
   <div class="navbar-header">
-    <%= link_to t(".title"), "#", class: "navbar-brand"%>
+    <%= link_to t(".title"), admin_path, class: "navbar-brand"%>
   </div>
   <ul class="nav navbar-top-links navbar-right">
     <li class="nav-item dropdown">
-      <span id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><%= t ".username" %>
-        <span class="caret"></span>
-      </span>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <%= link_to t(".change_password"), "#", class: "dropdown-item" %>
-      </div>
+      <li class="dropdown">
+        <%= link_to "#", :"data-toggle" => "dropdown", :class => "dropdown-toggle" do %>
+          <%= current_user.name %> <b class="caret"></b>
+        <% end %>
+        <ul class="dropdown-menu">
+          <li>
+            <%= link_to t(".log_out"), logout_path, method: :delete %>
+          </li>
+        </ul>
+      </li>
     </li>
   </ul>
 </nav>
