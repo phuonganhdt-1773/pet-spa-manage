@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   resources :posts, only: %i(index show)
   resources :services, only: %i(index show)
   namespace :admin do
-   resources :comments
-   resources :services
-   resources :posts
-   resources :users
+    resources :comments
+    resources :services
+    resources :posts
+    resources :users
   end
 end

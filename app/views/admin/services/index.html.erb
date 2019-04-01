@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="table-toolbar">
-      <%= link_to t(".add"), "#", class: "btn btn-success" %>
+      <%= link_to t(".add"), new_admin_service_path, class: "btn btn-success" %>
     </div>
     <div class="panel panel-default">
       <div class="panel-body">
@@ -11,6 +11,7 @@
             <tr>
               <th><%= t ".stt" %></th>
               <th><%= t ".service_name" %></th>
+              <th><%= t ".picture" %></th>
               <th><%= t ".status" %></th>
               <th><%= t ".price" %></th>
               <th><%= t ".des" %></th>
@@ -23,6 +24,7 @@
             <tr>
               <td><%= create_index params[:page], index, Settings.per_page %></td>
               <td><%= s.name %></td>
+              <td><%= image_tag s.picture.url if s.picture? %></td>
               <td><%= s.status %></td>
               <td><%= s.price %></td>
               <td><%= s.description %></td>

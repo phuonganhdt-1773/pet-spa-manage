@@ -16,6 +16,8 @@ en:
         orders: "Orders"
         users: "Users"
         stats: "STATS"
+      footer:
+        title: "2018 - Design by Lien and Phuong Anh"
   users:
     create:
       welcome_to_pet_spa_house: "Welcome to the Pet spa house!"
@@ -136,17 +138,38 @@ en:
         delete: "Delete"
         edit: "Edit"
         confirm: "Are you sure?"
+        add: "Add new item"
+        picture: "Picture"
       update:
         post_updated: "Post updated!"
-      destroy:
-        post_deleted: "Post deleted!"
-        delete_failed: "Post delete failed!"
+        success: "Update successfully"
       load_post:
         post_not_found: "Post haven't found"
-      post:
-        post: "Post"
-        ago: "ago"
-        delete: "delete"
+      edit:
+        title: "Edit service"
+        update: "Update"
+        public: "Public"
+        pending: "Pending"
+      destroy:
+        user_delete_succeed: "User delete succeed"
+        user_delete_failed: "User delete failed"
+        delete_fail: "Delete fail"
+        not_found_service: "Service doesn't exist"
+        add: "Add new item"
+        success: "Delete successfully"
+      new:
+        title: "Add new service"
+        not_found_service: "Service doesn't exist"
+        create: "Add"
+        public: "Public"
+        pending: "Pending"
+      create:
+        create_unsuccess: "Create Unsuccesfully!"
+        created: Post Created!
+    post:
+      post: "Post"
+      ago: "ago"
+      delete: "delete"
     users:
       index:
         stt: "No."
@@ -160,22 +183,11 @@ en:
         delete: "Delete"
         confirm: "Are you sure?"
         delete: "Delete"
-      destroy:
-        user_delete_succeed: "User delete succeed"
-        user_delete_failed: "User delete failed"
-        delete_fail: "Delete fail"
-        not_found_service: "Service doesn't exist"
-        add: "Add new item"
       update:
         success: "Update success"
       destroy:
         success: "delete success"
         fail: "delete fail"
-      edit:
-        title: "Edit service"
-        update: "Update"
-        public: "Public"
-        pending: "Pending"
   static_pages:
     home:
       title: "Pet spa"
