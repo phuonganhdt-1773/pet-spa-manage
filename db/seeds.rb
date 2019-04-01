@@ -21,7 +21,7 @@ end
 10.times do |n|
   Post.create!(title: FFaker::Lorem.sentence(5),
                like_quantity: 0,
-               content: FFaker::Lorem.sentence(15),
+               content: FFaker::Lorem.sentence(60),
                sumary: FFaker::Lorem.sentence(5),
                status: 1)
 end
@@ -40,22 +40,4 @@ end
                   status: 1,
                   price: FFaker::Random.rand(10..99),
                   description: FFaker::Lorem.sentence(10))
-end
-
-10.times do |n|
-  Pet.create!(name: FFaker::Lorem.sentence(3),
-              user_id: FFaker::Random.rand(2..10),
-              breed: FFaker::Lorem.sentence(1),
-              gender: "Male",
-              weight: FFaker::Random.rand(2..10),
-              height: FFaker::Random.rand(2..10),)
-end
-
-10.times do |n|
-  Pet.create!(name: FFaker::Lorem.sentence(2),
-              user_id: FFaker::Random.rand(2..10),
-              breed: FFaker::Lorem.sentence(1),
-              gender: "Female",
-              weight: FFaker::Random.rand(2..10),
-              height: FFaker::Random.rand(2..10),)
 end
