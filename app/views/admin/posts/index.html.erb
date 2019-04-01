@@ -22,7 +22,10 @@
             <tr>
               <td><%= create_index params[:page], index, Settings.per_page %></td>
               <td><%= post.title %></td>
-              <td><%= post.content %></td>
+              <td>
+                <%= truncate post.content, length: Settings.display_text%>
+                <%= link_to (t ".read_more"), post %>
+              </td>
               <td><%= post.sumary %></td>
               <td><%= post.status %></td>
               <td><%= image_tag post.picture.url if post.picture? %></td>

@@ -1,0 +1,40 @@
+<% provide(:title, t(".pets")) %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to t(".create"), new_admin_pet_path, class: "btn btn-success" %>
+        <table width="100%" class="table table-bordered table-hover" id="datatable">
+          <thead>
+            <tr>
+              <th><%= t ".stt" %></th>
+              <th><%= t ".pet_name" %></th>
+              <th><%= t ".description" %></th>
+              <th><%= t ".created_at" %></th>
+              <th colspan="2"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @pets.each_with_index do |pet,index| %>
+            <tr>
+              <td><%= create_index params[:page], index, Settings.per_page %></td>
+              <td><%= pet.name %></td>
+              <td><%= pet.description %></td>
+              <td><%= pet.created_at %></td>
+              <td>
+                <%= link_to t(".edit"), edit_admin_pet_path(pet.id),
+                  class: "btn btn-warning" %>
+              </td>
+              <td>
+                <%= link_to t(".delete"), admin_pet_path(pet.id),
+                method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @pets %>
+      </div>
+    </div>
+  </div>
+</div>

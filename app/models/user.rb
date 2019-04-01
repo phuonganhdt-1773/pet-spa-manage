@@ -8,13 +8,19 @@ class User < ApplicationRecord
   before_save {email.downcase!}
   before_create :create_activation_digest
 
-  USER_PARAMS = [:name, :email, :password, :password_confirmation].freeze
+  USER_PARAMS = [:name, :phone, :address, :email, :password, :password_confirmation].freeze
   PASSWORD_PARAMS = [:password, :password_confirmation]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  NUMBER_REGEX = /\d[0-9]\)*\z/
 
   validates :name, presence: true, length: {maximum: Settings.max_name_lenght}
-  validates :email, presence: true, length: {maximum: Settings.max_email_lenght},
-   format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :address, presence: true,
+    length: {maximum: Settings.max_address_lenght}
+  validates :phone, presence: true, length: {is: Settings.phone_lenght},
+    format: {with: NUMBER_REGEX}, uniqueness: true
+  validates :email, presence: true,
+    length: {maximum: Settings.max_email_lenght},
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, allow_nil: true,
     length: {minimum: Settings.min_pass_lenght}
 

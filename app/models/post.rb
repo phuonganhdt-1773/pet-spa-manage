@@ -10,12 +10,11 @@ class Post < ApplicationRecord
   scope :by_lastest, -> {order created_at: :desc}
 
   validate  :picture_size
-  validates :title, presence: true,
-            length: {maximum: Settings.max_title_length}
+  validates :title, presence: true, length: {maximum: Settings.max_title_length}
   validates :content, presence: true,
-            length: {minimum: Settings.min_content_length}
+    length: {minimum: Settings.min_content_length}
   validates :sumary, presence: true,
-            length: {maximum: Settings.max_sumary_length}
+    length: {maximum: Settings.max_sumary_length}
 
   mount_uploader :picture, PictureUploader
 

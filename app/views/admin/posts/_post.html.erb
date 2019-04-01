@@ -11,7 +11,7 @@
     <%= t ".ago" %>
     <% if current_user.admin? %>
       <%= link_to t(".delete"), post, method: :delete,
-                                       data: { confirm: t(".are_u_sure") } %>
+        data: { confirm: t(".are_u_sure") } %>
     <% end %>
   </span>
 </li>
