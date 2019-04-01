@@ -1,16 +1,22 @@
 User.create!(name: "Example User",
              email: "example@railstutorial.org",
+             phone: "0123456780",
+             address: "88 khuong dinh stress",
              password: "foobar",
              password_confirmation: "foobar",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
-10.times do |n|
+9.times do |n|
   name  = FFaker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
+  phone = "012345678#{n+1}"
+  address = "#{n+1} khuong dinh stress"
   User.create!(name:  name,
                email: email,
+               phone: phone,
+               address: address,
                password: password,
                password_confirmation: password,
                admin: false,

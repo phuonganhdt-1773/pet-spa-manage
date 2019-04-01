@@ -6,8 +6,7 @@ class Service < ApplicationRecord
   SERVICE_PARAMS = [:name, :status, :price, :picture, :description].freeze
 
   validate  :picture_size
-  validates :name, presence: true,
-            length: {maximum: Settings.max_service_name}
+  validates :name, presence: true, length: {maximum: Settings.max_service_name}
   validates :price, presence: true, numericality: {only_float: true}
   validates :status, presence: true
   mount_uploader :picture, PictureUploader

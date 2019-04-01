@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     resources :services
     resources :posts
     resources :users
+    resources :pets
   end
 end

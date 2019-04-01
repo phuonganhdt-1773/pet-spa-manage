@@ -10,6 +10,7 @@ en:
         dashboard: "Dashboard"
         manage_content: "MANAGE CONTENT"
         posts: "Posts"
+        pets: "Pets"
         comments: "Comments"
         likes: "Likes"
         services: "Services"
@@ -124,6 +125,15 @@ en:
         content: "Content"
         sumary: "Sumary"
         created_at: "Create at"
+        action: "Action"
+        read_more: Read more.
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      update:
+        post_updated: "Post update!"
+      destroy:
+        post_deleted: "Post deleted!"
     services:
       index:
         services: "All services"
@@ -188,6 +198,37 @@ en:
       destroy:
         success: "delete success"
         fail: "delete fail"
+      edit:
+        title: "Edit service"
+        update: "Update"
+        public: "Public"
+        pending: "Pending"
+    pets:
+      new:
+        add_new_pet: "Add new pet"
+        create_pet: "Create pet"
+      create:
+        create_unsuccess: "Create Unsuccesfully!"
+        created: Pet Created!
+      edit:
+        save_change: Save change
+        edit_pet: "Edit pet"
+      index:
+        pets: Pets
+        pet_name: "Pet name"
+        create: "Create"
+        stt: "No."
+        description: "Description"
+        created_at: "Create at"
+        read_more: Read more.
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      update:
+        pet_updated: "Pet update!"
+      destroy:
+        pet_deleted: "Pet deleted!"
   static_pages:
     home:
       title: "Pet spa"
