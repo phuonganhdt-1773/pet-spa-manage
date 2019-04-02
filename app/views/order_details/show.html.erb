@@ -1,0 +1,17 @@
+<h1><%= t ".detail" %></h1>
+<table>
+  <thead>
+    <tr>
+      <th><%= t ".datetime" %></th>
+      <th><%= t ".pet" %></th>
+      <th><%= t ".service" %></th>
+    </tr>
+	</thead>
+	<tbody>
+    <tr>
+      <td><%= @order_detail.order_date.to_time.strftime t(".format_time") %></td>
+      <td><%= @order_detail.pet_name %></td>
+      <td><%= @order_detail.service_name %></td>
+    </tr>
+  </tbody>
+</table>
