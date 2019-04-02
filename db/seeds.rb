@@ -50,3 +50,23 @@ end
 
 Pet.create!(name: "Cat", description: FFaker::Lorem.sentence(10))
 Pet.create!(name: "Dog", description: FFaker::Lorem.sentence(10))
+
+10.times do |n|
+  Pet.create!(name: FFaker::Lorem.sentence(1),
+          description: FFaker::Lorem.sentence(5))
+end
+
+10.times do |n|
+  Order.create!(user_id: n+1, date: Time.zone.now)
+end
+
+10.times do |i|
+10.times do |j|
+10.times do |k|
+      OrderDetail.create!(order_id: k+1,
+                      pet_id: j+1,
+                      service_id: i+1,
+                      price: FFaker::Random.rand(10..99))
+    end
+  end
+end

@@ -19,6 +19,10 @@
       <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png",
         class: "picture" %>
 
+      <%= f.label :status %>
+      <%= f.select :status, options_for_select(show_status,
+        selected: @post.status) %>
+
       <%= f.submit t(".save_change"), class: "btn btn-primary" %>
     <% end %>
   </div>

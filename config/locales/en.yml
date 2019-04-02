@@ -17,6 +17,7 @@ en:
         orders: "Orders"
         users: "Users"
         stats: "STATS"
+        stat: "Stats"
       footer:
         title: "2018 - Design by Lien and Phuong Anh"
   users:
@@ -115,6 +116,8 @@ en:
       edit:
         save_change: Save change
         edit_post: "Edit post"
+        pending: "Pending"
+        public: "Public"
       index:
         posts: "Posts"
         create: "Create"
@@ -129,6 +132,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+        search: "Search"
       update:
         post_updated: "Post update!"
       destroy:
@@ -232,6 +236,16 @@ en:
         pet_updated: "Pet update!"
       destroy:
         pet_deleted: "Pet deleted!"
+    stats:
+      index:
+        stats: "Stats"
+        service_most_used: "The service used most!"
+        revenue_monthly: "The revenue monthly of "
+        month: "Month"
+        revenue: "Revenue"
+        service_name: "Service name"
+        description: "Description"
+        price: "Price"
   static_pages:
     home:
       title: "Pet spa"

@@ -4,6 +4,10 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <%= link_to t(".create"), new_admin_post_path, class: "btn btn-success" %>
+        <%= form_tag(admin_posts_path, method: :get) do %>
+          <%= text_field_tag :term, params[:term]%>
+          <%= submit_tag t(".search"), class: "btn btn-success"%>
+        <% end %>
         <table width="100%" class="table table-bordered table-hover" id="datatable">
           <thead>
             <tr>

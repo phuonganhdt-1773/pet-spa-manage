@@ -16,6 +16,7 @@ class Service < ApplicationRecord
   scope :other_services, ->(id){where.not id: id}
   scope :by_lastest, ->{order created_at: :desc}
   scope :public_service, ->{where status: 1}
+  scope :most_service, ->(id){where id: id}
 
   private
   def picture_size
