@@ -261,6 +261,7 @@ en:
         detail: "Detail"
         edit: "Edit"
         delete: "Delete"
+        confirm: "Are you sure?"
       edit:
         title: "Edit order"
         update: "Update"
@@ -268,9 +269,18 @@ en:
         pending: "Pending"
       update:
         success: "Update successfully"
+      destroy:
+        deleted: "Delete successfully"
     order_details:
       show:
         title: "Detail order"
+        not_found: "Order has no detail"
+    likes:
+      index:
+        title: "Likes"
+      like:
+        like: "Like"
+        likes: "Likes"
   static_pages:
     home:
       title: "Pet spa"
@@ -362,6 +372,8 @@ en:
       title: "POSTS"
       read_more: "Read more"
       comments: "Comments"
+      like: "Like"
+      likes: "Likes"
     show:
       related: "Related Posts"
       detail: "Detail"
@@ -408,3 +420,10 @@ en:
       pet: "Pet"
       service: "Service"
       format_time: "%B %e at %l:%M %p"
+  likes:
+    form:
+      like: "Like"
+      un_like: "Unlike"
+    create:
+      cannot_like: "You cannot like more than one"
+      cannot_dislike: "You cannot dislike"
