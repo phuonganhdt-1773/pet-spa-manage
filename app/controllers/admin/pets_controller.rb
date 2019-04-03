@@ -3,7 +3,7 @@ class Admin::PetsController < Admin::BaseController
   before_action :load_pet, :logged_in_user, only: %i(edit update destroy)
 
   def index
-    @pets = Pet.page(params[:page]).per Settings.quantity_per_page
+    @pets = Pet.search(params[:term]).page(params[:page]).per Settings.quantity_per_page
   end
 
   def new

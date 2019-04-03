@@ -224,6 +224,8 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+        search: "Search"
+        search_by: "Search by name or description..."
       update:
         pet_updated: "Pet update!"
       destroy:
