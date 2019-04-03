@@ -24,5 +24,7 @@ Rails.application.routes.draw do
     resources :users
     resources :pets
     resources :stats
+    resources :orders
+    resources :order_details
   end
 end

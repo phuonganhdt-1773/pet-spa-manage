@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   before_action :load_service, only: %i(show)
 
   def index
-    @services = Service.page(params[:page]).per Settings.quantity_per_page
+    @services = Service.all_services.page(params[:page]).per Settings.quantity_per_page
   end
 
   def show

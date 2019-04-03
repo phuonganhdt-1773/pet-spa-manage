@@ -6,8 +6,10 @@ class OrderDetail < ApplicationRecord
   delegate :date, to: :order, prefix: true
   delegate :name, to: :pet, prefix: true
   delegate :name, to: :service, prefix: true
+  delegate :price, to: :service, prefix: true
 
   scope :count_max, ->{select(:service_id).group(:service_id).count}
+  scope :detail, ->(order_id){where order_id: order_id}
 
   def self.revenue year
     OrderDetail.find_by_sql("
@@ -15,12 +17,5 @@ class OrderDetail < ApplicationRecord
       FROM order_details WHERE YEAR(created_at) = '#{year}'
       GROUP BY MONTH(created_at)
       ")
-  end
-
-  private
-  def update_price
-    service = Service.find_by id: self.service_id
-    return unless service
-    self.update price: service.price
   end
 end

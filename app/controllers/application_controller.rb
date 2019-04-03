@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_admin!
-    redirect_to(root_url) unless current_user.admin
+    return if logged_in? && current_user.admin
+    redirect_to(root_url)
   end
 end

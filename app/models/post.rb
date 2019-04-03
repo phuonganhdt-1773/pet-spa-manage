@@ -3,10 +3,14 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   enum status: {Public: 1, Pending: 0}
 
-  scope :most_likes, ->{where like_quantity: self.maximum(:like_quantity)}
-  scope :other_posts, ->(id){where.not id: id}
-  scope :all_posts, ->{select :id, :title, :sumary, :content}
-  scope :by_lastest, -> {order created_at: :desc}
+  POST_PARAMS = [:title, :content, :sumary, :picture].freeze
+
+  scope :acive_post, ->{where status: Settings.status_active}
+  scope :get_attr, ->{select :id, :title, :sumary, :picture, :content}
+  scope :most_likes, ->{where(like_quantity: self.maximum(:like_quantity)).acive_post}
+  scope :other_posts, ->(id){acive_post.where.not id: id}
+  scope :all_posts, ->{acive_post.get_attr.order created_at: :desc}
+  scope :by_lastest, ->{order created_at: :desc}
 
   POST_PARAMS = [:title, :content, :sumary, :picture, :status, :term].freeze
 

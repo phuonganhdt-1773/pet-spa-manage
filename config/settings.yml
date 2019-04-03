@@ -17,3 +17,4 @@ max_sumary_length: 255
 max_service_name: 100
 display_text: 160
 year_stats: 2019
+status_active: 1
