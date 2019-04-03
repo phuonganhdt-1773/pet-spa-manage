@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "/admin", to: "admin/base#home", :as => "admin"
   get "/home", to: "static_pages#home"
   get "/login", to: "sessions#new"
+  get "/about-us", to: "static_pages#about_us", :as => "about_us"
+  get "/contact", to: "static_pages#contact", :as => "contact"
   post "/login", to: "sessions#create"
   post "/subscribe", to: "static_pages#order"
   delete "/logout", to: "sessions#destroy"

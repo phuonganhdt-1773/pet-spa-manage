@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
     @services = Service.all_services.limit Settings.limit_home
     @posts = Post.all_posts.limit Settings.limit_home
   end
+
+  def about_us; end
+
+  def contact; end
 end
