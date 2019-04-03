@@ -39,10 +39,10 @@
                 <%= link_to t(".posts"), posts_path, class: "menu-link sub-menu-link" %>
           </li>
           <li id="nav-menu-item-836" class="main-menu-item">
-            <%= link_to t(".about_us"), "#", class: "menu-link sub-menu-link" %>
+            <%= link_to t(".about_us"), about_us_url, class: "menu-link sub-menu-link" %>
           </li>
         <li id="nav-menu-item-836" class="main-menu-item">
-          <%= link_to t(".contact_us"), "#", class: "menu-link sub-menu-link" %>
+          <%= link_to t(".contact"), contact_url, class: "menu-link sub-menu-link" %>
         </li>
         <% if logged_in? %>
           <li class="dropdown">

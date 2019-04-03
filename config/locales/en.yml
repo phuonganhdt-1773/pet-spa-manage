@@ -6,6 +6,7 @@ en:
         title: "Admin Pets spa"
         change_password: "Change password"
         log_out: "Logout"
+        home: "Home"
       sidebar:
         dashboard: "Dashboard"
         manage_content: "MANAGE CONTENT"
@@ -19,7 +20,7 @@ en:
         stats: "STATS"
         stat: "Stats"
       footer:
-        title: "2018 - Design by Lien and Phuong Anh"
+        title: "2019 - Design by Lien and Phuong Anh"
   users:
     create:
       welcome_to_pet_spa_house: "Welcome to the Pet spa house!"
@@ -75,19 +76,6 @@ en:
     base:
       home:
         title: "Admin"
-      header:
-        call: "Call us Now: 0971006294"
-        login: "Login"
-        register: "Register"
-        home: "Home"
-        services: "Services"
-        blogs: "Blogs"
-        about_us: "About us"
-        contact_us: "Contact us"
-      hot_blog:
-        title: "Haustiere"
-        summary: "Pet trade and exchange"
-        read_more: "Read more"
     comments:
       index:
         stt: STT
@@ -275,7 +263,7 @@ en:
     home:
       title: "Pet spa"
     footer:
-      title: "@2019 - Design by:"
+      title: "2019 - Design by Lien and Phuong Anh"
     service:
       read_more: "Read more"
     header:
@@ -288,12 +276,21 @@ en:
       services: "Services"
       posts: "Posts"
       about_us: "About us"
-      contact_us: "Contact us"
+      contact: "Contact"
       account: "Account"
       admin: "Admin"
       home: "Home"
     hot_blog:
       read_more: "Read more"
+    about_us:
+      about_us: "About us"
+      description_about_us: "Our expertly trained pet-grooming specialists will meet your individual needs and requirements. So whether you’re treating your pet to an exfoliating or moisturising facial by one of our City & Guilds qualified pet groomers, or a custom hair styling by one of our Senior Stylists, The Pet Spa will give your cherished pet their undivided expert attention."
+    contact:
+      contact: "Contact"
+      contact_us: "Contact us:"
+      address: "2rd Floor, Building 25T2, Nguyen Thi Thap, Trung Hoa, Cau Giay, Hanoi 100000, Vietnam"
+      phone: "Hotline: 0943356109 - 0971006294"
+      sign: "A-dtp - L-ht => Pet-Spa"
   sessions:
     create:
       invalid_email_or_password_combination:

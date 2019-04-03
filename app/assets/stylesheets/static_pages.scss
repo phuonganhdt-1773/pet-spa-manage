@@ -91,3 +91,30 @@ a.btn-create{
   width: 100%;
   height: 300px;
 }
+.custom-image{
+  height: 100%;
+  width: 100%;
+}
+div.round {
+  border: 2px solid red;
+  border-radius: 10px;
+  height:400px;
+  width: 500px;
+  float: right;
+}
+div.text{
+  float: left;
+}
+div.contact{
+  margin-top: 45px;
+}
+p.paragraph{
+    width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    -webkit-line-clamp: 10;
+    height: 500px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
