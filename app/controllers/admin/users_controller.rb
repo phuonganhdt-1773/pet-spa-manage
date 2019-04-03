@@ -1,8 +1,6 @@
 class Admin::UsersController < Admin::BaseController
-  before_action :verify_admin!, :logged_in_user, only: %i(index destroy)
-
   def index
-    @users = User.page(params[:page]).per Settings.quantity_per_page
+    @users = User.search(params[:term]).page(params[:page]).per Settings.quantity_per_page
   end
 
   def destroy

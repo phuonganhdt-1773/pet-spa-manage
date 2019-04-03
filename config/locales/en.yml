@@ -133,6 +133,7 @@ en:
         delete: "Delete"
         confirm: "Are you sure?"
         search: "Search"
+        title: "Search by title post..."
       update:
         post_updated: "Post update!"
       destroy:
@@ -200,11 +201,14 @@ en:
         delete: "Delete"
         confirm: "Are you sure?"
         delete: "Delete"
+        search: "Search"
+        search_by: "Search by name or address..."
+        please_log_in: "Please login!"
       update:
         success: "Update success"
       destroy:
-        success: "delete success"
-        fail: "delete fail"
+        user_delete_failed: "User delete failed!"
+        user_delete_succeed: "User delete succeed!"
       edit:
         title: "Edit service"
         update: "Update"
@@ -286,6 +290,8 @@ en:
       about_us: "About us"
       contact_us: "Contact us"
       account: "Account"
+      admin: "Admin"
+      home: "Home"
     hot_blog:
       read_more: "Read more"
   sessions:

@@ -1,13 +1,13 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
-  has_many :orders
-  has_many :likes
+  has_many :orders, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
   before_save {email.downcase!}
   before_create :create_activation_digest
 
-  USER_PARAMS = [:name, :phone, :address, :email, :password, :password_confirmation].freeze
+  USER_PARAMS = [:name, :phone, :address, :email, :password, :password_confirmation, :term].freeze
   PASSWORD_PARAMS = [:password, :password_confirmation]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   NUMBER_REGEX = /\d[0-9]\)*\z/
@@ -34,6 +34,14 @@ class User < ApplicationRecord
 
     def new_token
       SecureRandom.urlsafe_base64
+    end
+
+    def search term
+      if term
+        where("name LIKE ? OR address LIKE ?", "%#{term}%", "%#{term}%")
+      else
+        all
+      end
     end
   end
 
