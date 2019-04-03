@@ -2,6 +2,12 @@
   <div class="col-lg-12">
     <div class="panel panel-default">
       <div class="panel-body">
+        <div class="table-toolbar">
+          <%= form_tag admin_users_path, class: "search", method: :get do %>
+            <%= text_field_tag :term, params[:term], placeholder: t(".search_by") %>
+            <%= submit_tag t(".search"), class: "btn btn-primary" %>
+          <% end %>
+        </div>
         <table width="100%" class="table table-bordered table-hover" id="datatable">
           <thead>
             <tr>
@@ -23,8 +29,8 @@
               <td><%= user.name %></td>
               <td><%= user.email %></td>
               <td><%= user.phone %></td>
-              <td><%= user.email %></td>
               <td><%= user.address %></td>
+              <td><%= user.created_at %></td>
               <td>
                 <%= link_to t(".delete"), admin_user_path(user.id),
                 method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>

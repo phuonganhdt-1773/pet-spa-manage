@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  has_many :order_details
+  has_many :order_details, dependent: :destroy
 
   PET_PARAMS = [:name, :description].freeze
 
