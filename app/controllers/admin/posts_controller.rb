@@ -3,7 +3,7 @@ class Admin::PostsController < Admin::BaseController
   before_action :load_post, :logged_in_user, only: %i(edit update destroy)
 
   def index
-    @posts = Post.page(params[:page]).per Settings.quantity_per_page
+    @posts = Post.search(params[:term]).page(params[:page]).per Settings.quantity_per_page
   end
 
   def new
