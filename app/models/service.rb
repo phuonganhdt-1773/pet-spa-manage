@@ -12,10 +12,11 @@ class Service < ApplicationRecord
 
   mount_uploader :picture, PictureUploader
 
-  scope :all_services, ->{select :id, :name, :description, :price}
-  scope :other_services, ->(id){where.not id: id}
+  scope :public_service, ->{where status: Settings.status_active}
+  scope :get_attr, ->{select :id, :name, :description, :picture, :price}
+  scope :all_services, ->{get_attr.public_service.order created_at: :desc}
+  scope :other_services, ->(id){public_service.where.not id: id}
   scope :by_lastest, ->{order created_at: :desc}
-  scope :public_service, ->{where status: 1}
   scope :most_service, ->(id){where id: id}
 
   private

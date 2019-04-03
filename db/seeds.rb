@@ -48,9 +48,6 @@ end
                   description: FFaker::Lorem.sentence(10))
 end
 
-Pet.create!(name: "Cat", description: FFaker::Lorem.sentence(10))
-Pet.create!(name: "Dog", description: FFaker::Lorem.sentence(10))
-
 10.times do |n|
   Pet.create!(name: FFaker::Lorem.sentence(1),
           description: FFaker::Lorem.sentence(5))

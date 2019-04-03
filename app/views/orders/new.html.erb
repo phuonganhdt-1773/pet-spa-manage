@@ -1,17 +1,18 @@
-<div class="col-md-4">
+<div class="order">
+  <div class="col-md-6 order-form">
   <h2><%= t ".order" %></h2>
   <%= form_for @order do |f| %>
     <%= render "shared/error_messages", object: f.object %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.datetime_field :date %>
     <%= f.fields_for :order_details do |d| %>
-    	<%= d.select(:pet_id, @pets.collect {|p| [ p.name, p.id ] },
-    	{include_blank: t(".select_pet")}) %>
-    	<%= d.select(:service_id, @services.collect {|p| [ p.name, p.id ] },
-    	{include_blank: t(".select_service"), selected: @service_id}) %>
+      <%= d.select :pet_id, options_for_select(pet_option) %>
+      <%= d.select :service_id, options_for_select(service_option,
+      {selected: @service_id}) %>
       <%= d.text_field :price, value: @service_price, readonly: :true %>
     <% end %>
-    <%= f.submit t(".save") %>
+    <%= f.submit t(".save"), class: "btn btn-success" %>
   <% end %>
+  </div>
+  <div class="clearfix"></div>
 </div>
-<div class="clearfix"></div>

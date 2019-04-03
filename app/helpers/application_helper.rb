@@ -16,4 +16,12 @@ module ApplicationHelper
   def show_status
     [t(".public"), t(".pending")]
   end
+
+  def pet_option
+    Pet.all_pets.pluck :name, :id
+  end
+
+  def service_option
+    Service.public_service.pluck :name, :id
+  end
 end

@@ -246,6 +246,27 @@ en:
         service_name: "Service name"
         description: "Description"
         price: "Price"
+    orders:
+      index:
+        orders: "Orders"
+        stt: "STT"
+        status: "Status"
+        user: "User"
+        created_at: "Created at"
+        action: "Action"
+        detail: "Detail"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        title: "Edit order"
+        update: "Update"
+        public: "Public"
+        pending: "Pending"
+      update:
+        success: "Update successfully"
+    order_details:
+      show:
+        title: "Detail order"
   static_pages:
     home:
       title: "Pet spa"

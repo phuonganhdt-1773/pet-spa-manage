@@ -58,7 +58,7 @@ class CommentsController < ApplicationController
 
   def comment_owner
     return if current_user.id == @comment.user_id
-    flash[:notice] = t ".notice"
+    flash[:notice] = "not user"
     redirect_to @post
   end
 
