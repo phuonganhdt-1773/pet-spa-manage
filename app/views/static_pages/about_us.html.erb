@@ -1,8 +1,11 @@
 <% provide(:title, t(".about_us")) %>
-<div>
-  <body>
+<div class="container contact">
+  <div class="text">
     <h2><%= t ".about_us" %></h2>
-    <p><%= t ".description_about_us" %></p>
+    <p class="paragraph"><%= t ".description_about_us" %></p>
+  </div>
+  <div class="round">
     <%= image_tag "slide1-2.jpg", class: "custom-image" %>
-  </body>
+  </div>
+  <div class="clearfix"></div>
 </div>
