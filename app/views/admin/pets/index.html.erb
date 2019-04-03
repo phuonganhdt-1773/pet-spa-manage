@@ -3,6 +3,12 @@
   <div class="col-lg-12">
     <div class="panel panel-default">
       <div class="panel-body">
+        <div class="table-toolbar">
+          <%= form_tag admin_pets_path, class: "search", method: :get do %>
+            <%= text_field_tag :term, params[:term], placeholder: t(".search_by")%>
+            <%= submit_tag t(".search"), class: "btn btn-primary" %>
+          <% end %>
+        </div>
         <%= link_to t(".create"), new_admin_pet_path, class: "btn btn-success" %>
         <table width="100%" class="table table-bordered table-hover" id="datatable">
           <thead>
