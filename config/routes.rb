@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "sessions/new"
   get "/signup", to: "users#new"
-  get "/admin", to: "admin/base#home", :as => "admin"
+  get "/admin", to: "admin/posts#index", :as => "admin"
   get "/home", to: "static_pages#home"
   get "/login", to: "sessions#new"
   get "/about-us", to: "static_pages#about_us", :as => "about_us"
