@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+
   enum status: {Public: 1, Pending: 0}
 
   POST_PARAMS = [:title, :content, :sumary, :picture].freeze

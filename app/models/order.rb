@@ -12,7 +12,7 @@ class Order < ApplicationRecord
   delegate :name, to: :user, prefix: true
 
   ORDER_PARAMS = [:user_id, :date, :status, order_details_attributes:
-    [:pet_id, :service_id, :order_id, :price]].freeze
+    [:pet_id, :service_id, :order_id, :id, :price]].freeze
 
   scope :by_lastest, ->{order created_at: :desc}
 end
