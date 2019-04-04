@@ -1,16 +1,12 @@
-<div class="vc_row wpb_row vc_row-no-padding" >
-  <div class="wpb_column column_container col-sm-12">
-    <div class="banner-info" style="height: 186px;">
-        <div class="container">
-            <% @post.each do |post| %>
-            <div class="slider-content-text white text-center text-uppercase animated bounceIn" data-animated="bounceIn"
-            style="background: url("<%= post.picture.url %>")">
-                <h5 class="title24 dosis-font font-bold"><%= post.title %></h5>
-                <p><%= post.sumary %></p>
-                <p><%= link_to t(".read_more"), post_path(post), class: "btn btn-success" %></p>
-            </div>
-            <% end %>
-        </div>
+<% @post.each do |post| %>
+<div class="slider-content-text white text-center text-uppercase animated bounceIn" data-animated="bounceIn"
+style="background: url('<%= post.picture.url %>'); background-repeat: no-repeat;
+background-size: 100% 100%; ">
+    <div class="hot-blog">
+      <h5 class="title24 dosis-font font-bold"><%= post.title %></h5>
+        <p><%= post.sumary %></p>
+        <p><%= link_to t(".read_more"), post_path(post), class: "btn btn-success" %></p>
     </div>
-  </div>
+
 </div>
+<% end %>
