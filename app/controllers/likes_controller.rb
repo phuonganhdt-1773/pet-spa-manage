@@ -8,7 +8,7 @@ class LikesController < ApplicationController
       redirect_to post_path @post
     else
       @post.likes.create user_id: current_user.id
-      @pre_like = @post.likes.find{|like| like.user_id == current_user.id}
+      user_like
       respond_to do |format|
         format.html {redirect_to post_path @post}
         format.js
@@ -22,6 +22,7 @@ class LikesController < ApplicationController
       redirect_to post_path @post
     else
       @like.destroy
+      user_like
       respond_to do |format|
         format.html {redirect_to post_path @post}
         format.js
@@ -42,7 +43,6 @@ class LikesController < ApplicationController
     flash[:error] = t ".like_not_found"
   end
   def user_like
-    @post = Post.find_by id: params[:post_id]
-    @pre_like = @post.likes.find_by user_id: current_user.id
+    @pre_like = @post.likes.find{|like| like.user_id == current_user.id}
   end
 end
