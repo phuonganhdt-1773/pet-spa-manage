@@ -1,12 +1,13 @@
 class Admin::OrdersController < Admin::BaseController
-  before_action :load_order, only: %i(edit update destroy)
-  before_action :load_detail_order, only: %(show)
+  before_action :load_order, only: %i(show edit update destroy)
 
   def index
     @orders = Order.by_lastest.page(params[:page]).per Settings.per_page
   end
 
-  def show; end
+  def show
+    @details = OrderDetail.detail(@order)
+  end
 
   def edit; end
 
@@ -39,12 +40,5 @@ class Admin::OrdersController < Admin::BaseController
 
   def order_params
     params.require(:order).permit Order::ORDER_PARAMS
-  end
-
-  def load_detail_order
-    @detail = OrderDetail.find_by id: params[:id]
-    return if @detail
-    flash[:error] = t ".not_found_detail"
-    redirect_to admin_orders_path
   end
 end

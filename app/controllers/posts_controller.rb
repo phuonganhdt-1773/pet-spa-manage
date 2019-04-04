@@ -9,9 +9,11 @@ class PostsController < ApplicationController
     @other_posts = Post.other_posts(@post).limit Settings.limit_home
     @comments = @post.comments.includes(:user).order(created_at: :desc)
     @comment = Comment.new
+    @pre_like = @post.likes.find{|like| like.user_id == current_user.id}
   end
 
   private
+
   def load_post
     @post = Post.find_by id: params[:id]
     return if @post

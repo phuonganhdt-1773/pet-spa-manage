@@ -1,0 +1,5 @@
+<% if @pre_like %>
+  <%= button_to t(".un_like"), post_like_path(@post, @pre_like), method: :delete, remote: true %>
+<% else %>
+  <%= button_to t(".like"), post_likes_path(@post), method: :post, remote: true %>
+<% end %>

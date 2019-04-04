@@ -13,11 +13,13 @@
             </tr>
           </thead>
           <tbody>
+            <% @details.each do |detail| %>
             <tr>
-              <td><%= @detail.pet_name %></td>
-              <td><%= @detail.service_name %></td>
-              <td><%= @detail.service_price %></td>
+              <td><%= detail.pet_name %></td>
+              <td><%= detail.service_name %></td>
+              <td><%= detail.service_price %></td>
             </tr>
+            <% end %>
           </tbody>
         </table>
       </div>
