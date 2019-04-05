@@ -11,10 +11,10 @@ class Pet < ApplicationRecord
   scope :all_pets, ->{select :id, :name}
 
   def self.search term
-      if term
-        where("name LIKE ? OR description LIKE ?", "%#{term}%", "%#{term}%")
-      else
-        all
-      end
+    if term
+      where("name LIKE ? OR description LIKE ?", "%#{term}%", "%#{term}%")
+    else
+      all
     end
+  end
 end
