@@ -23,14 +23,14 @@ RSpec.describe Pet, type: :model do
   end
 
   describe "#scope" do
-    let!(:pet1) {Pet.create :id => 12, :name => "Lien", :created_at => 1.day.ago}
-    let!(:pet2) {Pet.create :id => 13, :name => "Phuong Anh",:created_at => 2.day.ago}
+    let!(:pet1) {FactoryBot.create :pet}
+    let!(:pet2) {FactoryBot.create :pet}
     it {expect(Pet.by_lastest) == [pet1, pet2]}
     it {expect(Pet.all_pets) == pet1}
   end
 
   describe ".class_method" do
-    let!(:pet1) {Pet.create :name => "Lien", :description => "adsfdrftgyui"}
+    let!(:pet1) {FactoryBot.create :pet}
     it {expect(Pet.search("Lien"))}
   end
 end
