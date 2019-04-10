@@ -7,12 +7,12 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def new
-    @post = Post.new
+    @postz = Post.new
   end
 
   def create
-    @post = Post.new post_params
-    if @post.save
+    @postz = Post.new post_params
+    if @postz.save
       flash[:success] = t(".created")
       redirect_to admin_posts_path
     else
@@ -35,7 +35,7 @@ class Admin::PostsController < Admin::BaseController
   def destroy
     if @post.destroy
       flash[:success] = t(".post_deleted")
-      redirect_to request.referrer
+      redirect_to admin_posts_path
     else
       flash[:error] = t(".delete_failed")
       redirect_to admin_posts_path
@@ -45,7 +45,7 @@ class Admin::PostsController < Admin::BaseController
   private
 
   def post_params
-    params.require(:post).permit Post::POST_PARAMS
+    params.require(:postz).permit Post::POST_PARAMS
   end
 
   def load_post

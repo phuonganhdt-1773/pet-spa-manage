@@ -48,6 +48,7 @@ group :test do
   gem "chromedriver-helper"
   gem "shoulda-matchers", "~> 3.1"
   gem "database_cleaner"
+  gem "rails-controller-testing"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
