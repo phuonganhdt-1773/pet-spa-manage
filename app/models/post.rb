@@ -4,8 +4,6 @@ class Post < ApplicationRecord
 
   enum status: {Public: 1, Pending: 0}
 
-  POST_PARAMS = [:title, :content, :sumary, :picture].freeze
-
   scope :acive_post, ->{where status: Settings.status_active}
   scope :get_attr, ->{select :id, :title, :sumary, :picture, :content}
   scope :most_likes, ->{where(like_quantity: self.maximum(:like_quantity)).acive_post}

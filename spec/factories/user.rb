@@ -7,5 +7,6 @@ FactoryBot.define do
     password {"abc123"}
     password_confirmation {"abc123"}
     activated {true}
+    admin {true}
   end
 end
